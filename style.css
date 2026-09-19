@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
+}
+.image{
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  margin-top: 0;
+}
+
+button {
+  padding: 9px 14px;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.buttons,
+.google-drive,
+.search-box {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+input,
+textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-box input {
+  min-width: 220px;
+}
+
+#message,
+#driveStatus {
+  font-weight: bold;
+}
+
+.invoice {
+  background: white;
+  padding: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.invoice h2,
+.invoice h3 {
+  text-align: center;
+  margin: 5px;
+}
+
+.company {
+  text-align: center;
+}
+
+.top-fields {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.top-fields label {
+  flex: 1;
+  font-weight: bold;
+}
+
+.top-fields input {
+  width: 100%;
+  margin-top: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 6px;
+}
+
+th {
+  background: #eee;
+}
+
+td input {
+  width: 100%;
+  min-width: 80px;
+}
+
+.note {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.note textarea {
+  display: block;
+  width: 100%;
+  min-height: 80px;
+  margin-top: 5px;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 10px;
+  }
+
+  .invoice {
+    padding: 12px;
+    overflow-x: auto;
+  }
+
+  .top-fields {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  table {
+    min-width: 900px;
+  }
+
+  .google-drive,
+  .buttons,
+  .search-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .google-drive button,
+  .buttons button,
+  .search-box button {
+    width: 100%;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .buttons,
+  .google-drive,
+  .search-box,
+  .invoice > button {
+    display: none;
+  }
+
+  .invoice {
+    max-width: none;
+  }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#1f2937">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Invoice Software">
+
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+<body>
+
+<h1>Invoice Manager</h1>
+
+<div class="buttons">
+  <button onclick="newInvoice()">New Invoice</button>
+  <button onclick="searchInvoice()">Search Invoice</button>
+  <button onclick="saveInvoice()">Save Excel</button>
+  <button onclick="printInvoice()">Print</button>
+</div>
+
+<div class="google-drive">
+  <button onclick="googleLogin()">Connect Google Drive</button>
+  <button onclick="saveToGoogleDrive()">Save Excel to Google Drive</button>
+  <span id="driveStatus">Google Drive Not Connected</span>
+</div>
+
+<div class="search-box">
+  <input id="searchNo" placeholder="Enter invoice number">
+  <button onclick="searchInvoice()">Search</button>
+  <span id="message"></span>
+</div>
+
+<div class="invoice">
+  <div class="image">
+  <img src="images\image.png" alt="Girl in a jacket" width="200px" height="150px"></div>
+  
+  <p class="company">
+   Plot# 139,Block A(SMCHS), Karachi<br>
+    PHONE # 0321-2021321
+  </p>
+
+  <div class="top-fields">
+    <label>Client / Account Name
+      <input id="client">
+    </label>
+    <label>Invoice No.
+      <input id="invoiceNo">
+    </label>
+  </div>
+
+  <table id="invoiceTable">
+    <thead>
+      <tr>
+        <th>DATE</th>
+        <th>INVOICE</th>
+        <th>PASSENGER</th>
+        <th>SEGMENT</th>
+        <th>TRAVELING DATE</th>
+        <th>AIRLINE</th>
+        <th>TOTAL</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+    <tfoot>
+      <tr>
+        <td colspan="6">GRAND TOTAL</td>
+        <td id="grandTotal">0.00</td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <button onclick="addRow()">+ Add Row</button>
+
+  <label class="note">NOTE
+    <textarea id="note"></textarea>
+  </label>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
+<script src="https://accounts.google.com/gsi/client"></script>
+<script src="app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./service-worker.js")
+            .then(() => console.log("Service Worker registered"))
+            .catch(error => console.error("Service Worker error:", error));
+    });
+}
+</script>
+</body>
+</html>
