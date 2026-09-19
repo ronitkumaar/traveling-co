@@ -1,12 +1,12 @@
 const CACHE_NAME = "traveling-co-invoice-v1";
 
 const FILES_TO_CACHE = [
-    "./",
-    "./index.html",
-    "./style.css",
-    "./app.js",
-    "./manifest.json",
-    "./images/image.png"
+    "/traveling-co/",
+    "/traveling-co/index.html",
+    "/traveling-co/style.css",
+    "/traveling-co/app.js",
+    "/traveling-co/manifest.json",
+    "/traveling-co/images/image.png"
 ];
 
 self.addEventListener("install", event => {
@@ -14,7 +14,6 @@ self.addEventListener("install", event => {
         caches.open(CACHE_NAME)
             .then(cache => cache.addAll(FILES_TO_CACHE))
     );
-
     self.skipWaiting();
 });
 
@@ -28,7 +27,6 @@ self.addEventListener("activate", event => {
             )
         )
     );
-
     self.clients.claim();
 });
 

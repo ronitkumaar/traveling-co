@@ -2,19 +2,19 @@
   "name": "Traveling Co Invoice Software",
   "short_name": "Invoice",
   "description": "Traveling Co Invoice Management Software",
-  "start_url": "./",
+  "start_url": "/traveling-co/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#1f2937",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "icons/icon-192.png",
+      "src": "/traveling-co/images/image.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "icons/icon-512.png",
+      "src": "/traveling-co/images/image.png",
       "sizes": "512x512",
       "type": "image/png"
     }
