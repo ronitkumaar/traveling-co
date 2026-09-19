@@ -6,7 +6,7 @@
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#1f2937",
-  "orientation": "any",
+  "orientation": "landscape",
   "icons": [
     {
       "src": "/traveling-co/images/image.png",
