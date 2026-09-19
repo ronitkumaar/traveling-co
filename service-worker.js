@@ -1,4 +1,4 @@
-const CACHE_NAME = "traveling-co-invoice-v2";
+const CACHE_NAME = "traveling-co-invoice-v8";
 
 const FILES_TO_CACHE = [
     "/traveling-co/",
