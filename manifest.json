@@ -11,7 +11,7 @@
     {
       "src": "/traveling-co/images/image.png",
       "sizes": "192x192",
-      "type": "image/png",
+      "type": "image/png"
       
 
 
@@ -19,7 +19,7 @@
     {
       "src": "/traveling-co/images/image.png",
       "sizes": "512x512",
-      "type": "image/png",
+      "type": "image/png"
         
     }
   ]
